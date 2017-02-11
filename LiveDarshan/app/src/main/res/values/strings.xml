@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">Live Darshan</string>
+    <string name="tuljapurlive">Shri Tuljabhavani, Tuljapur</string>
+    <string name="kashilive">Shri Kashi Vishwanath, Varanasi</string>
+    <string name="pandalpurlive">Shri Vitthal Rukmini, Pandharpur</string>
+    <string name="author">\@Copyright - Anil Dhotre</string>
+    <string name="disclaimer">Disclamer: Live streaming content is provided by Temple Administration. This application is designed for easy, uninterrupted and ad-free provision for live streaming.</string>
+    <string name="live_streaming_warning">Please start live streaming and wait for at least 10 seconds for live streaming to start.</string>
+    <string name="question">Frequently Asked Questions</string>
+    <string name="email">Email Feedback/Questions</string>
+    <string name="share"><![CDATA[Share App with Family & Friends]]></string>
+    <string name="no_internet">Check Internet Connection!</string>
+
+    <string name="question_1">Question: Why live streaming not started after pressing Media Play button?</string>
+    <string name="answer_1">Answer: Temple live streaming service sometimes is temporarily down, please check again later.</string>
+
+    <string name="question_2">Question: Why does it take long time to load the live media streaming?</string>
+    <string name="answer_2">Answer: One or multiple factors can cause this issue, temple live streaming service handling high network requests or internet connectivity is slow.</string>
+
+    <string name="question_3">Question: Why is Sai Baba Temple, Shirdi and Siddhivinayak Temple, Mubmai missing in live streaming links?</string>
+    <string name="answer_3">Answer: Sorry, both the Temples Live streaming seems to be restricted and available only Temple owned websites/apps.</string>
+
+</resources>

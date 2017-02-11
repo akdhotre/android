@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/fragment_main"
+    android:orientation="vertical"
+    android:background="@drawable/om"
+    style="?android:attr/buttonBarStyle"
+    android:scrollbars="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:background="#da9706">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@mipmap/ic_launcher"
+            android:id="@+id/imageView"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/app_name"
+            android:layout_gravity="start"
+            android:gravity="start|center"
+            android:textStyle="normal|bold"
+            android:textSize="22sp"
+            android:paddingLeft="10dp"
+            android:paddingRight="0dp"
+            android:background="#da9706"
+            android:fontFamily="sans-serif" />
+
+    </LinearLayout>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="2"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tuljapurlive_btn"
+        style="?android:attr/buttonBarButtonStyle"
+        android:text="@string/tuljapurlive"
+        android:layout_gravity="bottom|center_horizontal"
+        android:fontFamily="monospace"
+        android:textStyle="normal|bold"
+        android:textSize="18sp"
+        android:layout_margin="5dp"
+        android:textColor="@android:color/white"
+        android:background="@drawable/button_states" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/kashilive_btn"
+        style="?android:attr/buttonBarButtonStyle"
+        android:text="@string/kashilive"
+        android:layout_margin="5dp"
+        android:fontFamily="monospace"
+        android:textStyle="normal|bold"
+        android:textSize="18sp"
+        android:textColor="@android:color/white"
+        android:shadowColor="@color/colorAccent"
+        android:background="@drawable/button_states"
+        android:layout_gravity="center_horizontal" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/pandalpurlive_btn"
+        style="?android:attr/buttonBarButtonStyle"
+        android:text="@string/pandalpurlive"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_margin="5dp"
+        android:fontFamily="monospace"
+        android:textStyle="normal|bold"
+        android:textSize="18sp"
+        android:textColor="@android:color/white"
+        android:shadowColor="@color/colorAccent"
+        android:background="@drawable/button_states"/>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="2"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/disclaimer"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_weight="1"
+        android:layout_margin="2dp"
+        android:textStyle="normal|bold"
+        android:textSize="12sp"
+        android:textColor="@android:color/white"
+        android:shadowColor="@color/colorAccent"
+        android:gravity="bottom|start|center"
+        android:paddingLeft="10dp"
+        android:paddingRight="0dp"
+        android:paddingBottom="10dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/question_btn"
+            android:layout_width="match_parent"
+            android:layout_height="@android:dimen/app_icon_size"
+            android:layout_weight="1"
+            android:src="@mipmap/ic_question"
+            android:background="@android:color/black"
+            android:contentDescription="@string/question"
+            android:layout_marginRight="3dp"
+            android:layout_marginLeft="0dp"
+            android:foreground="@drawable/button_states" />
+
+        <ImageButton
+            android:id="@+id/email_btn"
+            android:layout_width="match_parent"
+            android:layout_height="@android:dimen/app_icon_size"
+            android:src="@mipmap/ic_email"
+            android:background="@android:color/black"
+            android:layout_weight="1"
+            android:layout_marginRight="3dp"
+            android:layout_marginLeft="3dp"
+            android:contentDescription="@string/email"
+            android:foreground="@drawable/button_states" />
+
+        <ImageButton
+            android:id="@+id/share_btn"
+            android:layout_width="match_parent"
+            android:layout_height="@android:dimen/app_icon_size"
+            android:src="@mipmap/ic_share"
+            android:background="@android:color/black"
+            android:layout_weight="1"
+            android:layout_marginRight="0dp"
+            android:layout_marginLeft="3dp"
+            android:contentDescription="@string/share"
+            android:foreground="@drawable/button_states" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:text="@string/author"
+        android:background="#da9706"
+        android:layout_gravity="end"
+        android:fontFamily="sans-serif"
+        android:textStyle="normal|bold"
+        android:paddingLeft="10dp"
+        android:paddingRight="0dp"
+        android:gravity="center_horizontal|center"
+        android:elevation="1dp" />
+
+</LinearLayout>
