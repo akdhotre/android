@@ -27,7 +27,7 @@ public class MainFragment extends Fragment {
     /**
      * Use this factory method to create a new instance of
      * this fragment using the provided parameters.
-     *
+     *Kite2*Ebay
      * @return A new instance of fragment MainFragment.
      */
     public static MainFragment newInstance() {
@@ -66,7 +66,7 @@ public class MainFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 Intent emailIntent = new Intent(Intent.ACTION_SENDTO, Uri.fromParts(
-                        "mailto","akapps@gmail.com", null));
+                        "mailto",getString(R.string.dev_email_address), null));
                 emailIntent.putExtra(Intent.EXTRA_SUBJECT, "LiveDarshan App - Bug/Question/Feedback");
                 startActivity(Intent.createChooser(emailIntent, "Send Email"));
             }
@@ -94,7 +94,7 @@ public class MainFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 boolean isInternetConnected = isInternetConnected(getActivity());
-                Log.d(TAG, "Is internet connected: " + isInternetConnected);
+                //Log.d(TAG, "Is internet connected: " + isInternetConnected);
 
                 if(!isInternetConnected(getActivity())){
                     Toast.makeText(getActivity(), R.string.no_internet, Toast.LENGTH_LONG).show();
@@ -109,8 +109,7 @@ public class MainFragment extends Fragment {
                 Intent intent = new Intent(getActivity(), WebViewActivity.class);
                 intent.putExtra("url", url + mDisplayWidth + mDisplayHeight);
 
-                Log.d(TAG, "connecting " + url + mDisplayWidth + mDisplayHeight);
-                Toast.makeText(getActivity(), "connecting " + url + mDisplayWidth + mDisplayHeight, Toast.LENGTH_LONG).show();
+                //Log.d(TAG, "connecting " + url + mDisplayWidth + mDisplayHeight);
 
                 startActivity(intent);
             }

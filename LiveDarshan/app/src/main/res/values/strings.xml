@@ -3,7 +3,7 @@
     <string name="tuljapurlive">Shri Tuljabhavani, Tuljapur</string>
     <string name="kashilive">Shri Kashi Vishwanath, Varanasi</string>
     <string name="pandalpurlive">Shri Vitthal Rukmini, Pandharpur</string>
-    <string name="author">\@Copyright - Anil Dhotre</string>
+    <string name="author"><![CDATA[Designed & Developed by Anil Eknath Dhotre]]></string>
     <string name="disclaimer">Disclamer: Live streaming content is provided by Temple Administration. This application is designed for easy, uninterrupted and ad-free provision for live streaming.</string>
     <string name="live_streaming_warning">Please start live streaming and wait for at least 10 seconds for live streaming to start.</string>
     <string name="question">Frequently Asked Questions</string>
@@ -22,5 +22,6 @@
 
     <string name="media_width">-1</string>
     <string name="media_height">-1</string>
+    <string name="dev_email_address">akdhotre.apps@gmail.com</string>
 
 </resources>

@@ -11,6 +11,9 @@ import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.Toast;
 
+import java.io.IOException;
+import java.io.InputStream;
+
 import static com.lotustech.apps.android.livedarshan.R.id.webview;
 
 
@@ -28,7 +31,7 @@ public class WebViewFragment extends Fragment {
     private static final String TAG = "WebViewFragment";
 
     public static WebViewFragment newInstance(String url) {
-        Log.d(TAG, "new webview to load url: " + url);
+        //Log.d(TAG, "new webview to load url: " + url);
 
         WebViewFragment fragment = new WebViewFragment();
         Bundle args = new Bundle();
@@ -60,7 +63,7 @@ public class WebViewFragment extends Fragment {
 
         Bundle arguments = getArguments();
         String url = arguments.getString("url");
-        Log.d(TAG, "new webview to load url: " + url);
+        //Log.d(TAG, "new webview to load url: " + url);
 
 
         mWebView = (WebView) view.findViewById(webview);
@@ -69,7 +72,8 @@ public class WebViewFragment extends Fragment {
         //noinspection deprecation
         mWebView.setWebViewClient(new WebViewClient() {
             public void onReceivedError(WebView view, int errorCode, String description, String failingUrl) {
-                Toast.makeText(getActivity(), "Please connect later time, encountered error :" + description, Toast.LENGTH_SHORT).show();
+                view.loadUrl("file:///android_asset/error.html");
+                //Log.e(TAG, String.format("Encountered error url[%s], description[%s] ", failingUrl, description));
             }
         });
 
