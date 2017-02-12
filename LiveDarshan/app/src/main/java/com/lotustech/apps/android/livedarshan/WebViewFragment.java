@@ -1,16 +1,12 @@
 package com.lotustech.apps.android.livedarshan;
 
-import android.content.Context;
-import android.net.Uri;
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.util.Log;
 import android.view.LayoutInflater;
-import android.view.Menu;
-import android.view.MenuInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.webkit.WebChromeClient;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.Toast;
@@ -30,10 +26,6 @@ public class WebViewFragment extends Fragment {
     private WebView mWebView;
 
     private static final String TAG = "WebViewFragment";
-
-    public WebViewFragment() {
-        // Required empty public constructor
-    }
 
     public static WebViewFragment newInstance(String url) {
         Log.d(TAG, "new webview to load url: " + url);
@@ -59,6 +51,7 @@ public class WebViewFragment extends Fragment {
 //        inflater.inflate(R.menu.menu, menu);
 //    }
 
+    @SuppressLint("SetJavaScriptEnabled")
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -73,6 +66,7 @@ public class WebViewFragment extends Fragment {
         mWebView = (WebView) view.findViewById(webview);
         mWebView.getSettings().setJavaScriptEnabled(true);
 
+        //noinspection deprecation
         mWebView.setWebViewClient(new WebViewClient() {
             public void onReceivedError(WebView view, int errorCode, String description, String failingUrl) {
                 Toast.makeText(getActivity(), "Please connect later time, encountered error :" + description, Toast.LENGTH_SHORT).show();

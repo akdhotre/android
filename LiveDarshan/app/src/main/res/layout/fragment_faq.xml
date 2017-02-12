@@ -18,8 +18,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:srcCompat="@mipmap/ic_launcher"
-            android:id="@+id/imageView"
-            />
+            android:contentDescription="@string/app_name" />
 
         <TextView
             android:layout_width="match_parent"
@@ -29,22 +28,30 @@
             android:gravity="start|center"
             android:textStyle="normal|bold"
             android:textSize="22sp"
+            android:paddingStart="10dp"
             android:paddingLeft="10dp"
             android:paddingRight="0dp"
+            android:paddingEnd="0dp"
             android:background="#da9706"
             android:fontFamily="sans-serif" />
 
     </LinearLayout>
 
     <TextView
+        android:paddingStart="5dp"
         android:paddingLeft="5dp"
+        android:paddingRight="0dp"
+        android:paddingEnd="0dp"
         android:paddingTop="20dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/question_1"
         android:textColor="@android:color/white"/>
     <TextView
+        android:paddingStart="5dp"
         android:paddingLeft="5dp"
+        android:paddingRight="0dp"
+        android:paddingEnd="0dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/answer_1"
@@ -52,14 +59,20 @@
         android:paddingBottom="10dp"/>
 
     <TextView
+        android:paddingStart="5dp"
         android:paddingLeft="5dp"
+        android:paddingRight="0dp"
+        android:paddingEnd="0dp"
         android:paddingTop="20dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/question_2"
         android:textColor="@android:color/white"/>
     <TextView
+        android:paddingStart="5dp"
         android:paddingLeft="5dp"
+        android:paddingRight="0dp"
+        android:paddingEnd="0dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/answer_2"
@@ -68,14 +81,20 @@
 
 
     <TextView
+        android:paddingStart="5dp"
         android:paddingLeft="5dp"
+        android:paddingRight="0dp"
+        android:paddingEnd="0dp"
         android:paddingTop="20dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/question_3"
         android:textColor="@android:color/white"/>
     <TextView
+        android:paddingStart="5dp"
         android:paddingLeft="5dp"
+        android:paddingRight="0dp"
+        android:paddingEnd="0dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/answer_3"
@@ -84,7 +103,7 @@
 
     <Space
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:layout_weight="2" />
 
     <TextView
@@ -95,8 +114,10 @@
         android:layout_gravity="end"
         android:fontFamily="sans-serif"
         android:textStyle="normal|bold"
+        android:paddingStart="10dp"
         android:paddingLeft="10dp"
         android:paddingRight="0dp"
+        android:paddingEnd="0dp"
         android:gravity="center_horizontal|center"/>
 
 

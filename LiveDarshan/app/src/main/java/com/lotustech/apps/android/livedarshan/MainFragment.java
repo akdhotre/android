@@ -24,22 +24,6 @@ public class MainFragment extends Fragment {
 
     private static final String TAG = "MainFragment";
 
-    private static final String MX_PLAYER_APP = "com.mxtech.videoplayer.ad";
-
-    private TextView mTuljapurLive;
-
-    private TextView mKashiLive;
-
-    private TextView mPandalpurLive;
-
-    private ImageButton mQuestionButton;
-    private ImageButton mEmailButton;
-    private ImageButton mShareButton;
-
-    public MainFragment() {
-        // Required empty public constructor
-    }
-
     /**
      * Use this factory method to create a new instance of
      * this fragment using the provided parameters.
@@ -53,34 +37,22 @@ public class MainFragment extends Fragment {
         return fragment;
     }
 
-//    @Override
-//    public void onCreate(Bundle savedInstanceState) {
-//        super.onCreate(savedInstanceState);
-//        setHasOptionsMenu(true);
-//    }
-//
-//    @Override
-//    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
-//        super.onCreateOptionsMenu(menu, inflater);
-//        inflater.inflate(R.menu.menu, menu);
-//    }
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View v = inflater.inflate(R.layout.fragment_main, container, false);
 
-        mTuljapurLive = (TextView) v.findViewById(R.id.tuljapurlive_btn);
+        TextView mTuljapurLive = (TextView) v.findViewById(R.id.tuljapurlive_btn);
         mTuljapurLive.setOnClickListener(createListener("http://cam.live-s.cdn.bitgravity.com:1935/content:cdn-live/cam/live/secure/feed008?e=0&h=9e65498ec6c77c462ed63a051d55a801"));
 
-        mKashiLive = (TextView) v.findViewById(R.id.kashilive_btn);
+        TextView mKashiLive = (TextView) v.findViewById(R.id.kashilive_btn);
         mKashiLive.setOnClickListener(createListener("http://cam.live-s.cdn.bitgravity.com:1935/content:cdn-live/cam/live/secure/Kashi_Vishwanath?e=0&h=1d434391393bd1b37e858a2571fbbf3d"));
 
-        mPandalpurLive = (TextView) v.findViewById(R.id.pandalpurlive_btn);
+        TextView mPandalpurLive = (TextView) v.findViewById(R.id.pandalpurlive_btn);
         mPandalpurLive.setOnClickListener(createListener("http://cam.live-s.cdn.bitgravity.com:1935/content:cdn-live/cam/live/secure/feed002?e=0&h=c3ccf04373172e4d9e7b9392327d9b88"));
 
-        mQuestionButton = (ImageButton) v.findViewById(R.id.question_btn);
+        ImageButton mQuestionButton = (ImageButton) v.findViewById(R.id.question_btn);
         mQuestionButton.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
@@ -89,7 +61,7 @@ public class MainFragment extends Fragment {
             }
         });
 
-        mEmailButton = (ImageButton) v.findViewById(R.id.email_btn);
+        ImageButton mEmailButton = (ImageButton) v.findViewById(R.id.email_btn);
         mEmailButton.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
@@ -100,7 +72,7 @@ public class MainFragment extends Fragment {
             }
         });
 
-        mShareButton = (ImageButton) v.findViewById(R.id.share_btn);
+        ImageButton mShareButton = (ImageButton) v.findViewById(R.id.share_btn);
         mShareButton.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
@@ -128,8 +100,18 @@ public class MainFragment extends Fragment {
                     Toast.makeText(getActivity(), R.string.no_internet, Toast.LENGTH_LONG).show();
                     return;
                 }
+
+
+
+                String mDisplayWidth = getResources().getString(R.string.media_width).equals("-1") ? "" : "&width="+getResources().getString(R.string.media_width);
+                String mDisplayHeight = getResources().getString(R.string.media_height).equals("-1") ? "" : "&height=" + getResources().getString(R.string.media_height);
+
                 Intent intent = new Intent(getActivity(), WebViewActivity.class);
-                intent.putExtra("url", url);
+                intent.putExtra("url", url + mDisplayWidth + mDisplayHeight);
+
+                Log.d(TAG, "connecting " + url + mDisplayWidth + mDisplayHeight);
+                Toast.makeText(getActivity(), "connecting " + url + mDisplayWidth + mDisplayHeight, Toast.LENGTH_LONG).show();
+
                 startActivity(intent);
             }
         };

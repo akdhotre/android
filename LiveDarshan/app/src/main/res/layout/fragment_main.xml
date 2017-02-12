@@ -8,7 +8,8 @@
     android:orientation="vertical"
     android:background="@drawable/om"
     style="?android:attr/buttonBarStyle"
-    android:scrollbars="vertical">
+    android:scrollbars="vertical"
+    tools:ignore="Overdraw">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -20,8 +21,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:srcCompat="@mipmap/ic_launcher"
-            android:id="@+id/imageView"
-            />
+            android:contentDescription="@string/app_name"  />
 
         <TextView
             android:layout_width="match_parent"
@@ -31,8 +31,10 @@
             android:gravity="start|center"
             android:textStyle="normal|bold"
             android:textSize="22sp"
+            android:paddingStart="10dp"
             android:paddingLeft="10dp"
             android:paddingRight="0dp"
+            android:paddingEnd="0dp"
             android:background="#da9706"
             android:fontFamily="sans-serif" />
 
@@ -104,8 +106,10 @@
         android:textColor="@android:color/white"
         android:shadowColor="@color/colorAccent"
         android:gravity="bottom|start|center"
+        android:paddingStart="10dp"
         android:paddingLeft="10dp"
         android:paddingRight="0dp"
+        android:paddingEnd="0dp"
         android:paddingBottom="10dp"/>
 
     <LinearLayout
@@ -121,8 +125,10 @@
             android:src="@mipmap/ic_question"
             android:background="@android:color/black"
             android:contentDescription="@string/question"
+            android:layout_marginStart="3dp"
             android:layout_marginRight="3dp"
             android:layout_marginLeft="0dp"
+            android:layout_marginEnd="0dp"
             android:foreground="@drawable/button_states" />
 
         <ImageButton
@@ -146,6 +152,8 @@
             android:layout_weight="1"
             android:layout_marginRight="0dp"
             android:layout_marginLeft="3dp"
+            android:layout_marginStart="0dp"
+            android:layout_marginEnd="3dp"
             android:contentDescription="@string/share"
             android:foreground="@drawable/button_states" />
     </LinearLayout>
@@ -158,9 +166,10 @@
         android:layout_gravity="end"
         android:fontFamily="sans-serif"
         android:textStyle="normal|bold"
+        android:paddingStart="10dp"
         android:paddingLeft="10dp"
         android:paddingRight="0dp"
-        android:gravity="center_horizontal|center"
-        android:elevation="1dp" />
+        android:paddingEnd="0dp"
+        android:gravity="center_horizontal|center"/>
 
 </LinearLayout>

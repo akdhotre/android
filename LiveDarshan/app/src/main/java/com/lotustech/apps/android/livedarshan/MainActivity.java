@@ -1,10 +1,9 @@
 package com.lotustech.apps.android.livedarshan;
 
+import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -15,7 +14,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         FragmentManager fm = getSupportFragmentManager();
-        Fragment mainFragment = (Fragment) fm.findFragmentById(R.id.fragment_main);
+        Fragment mainFragment = fm.findFragmentById(R.id.fragment_main);
 
         if(mainFragment == null){
             mainFragment = MainFragment.newInstance();

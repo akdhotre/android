@@ -20,4 +20,7 @@
     <string name="question_3">Question: Why is Sai Baba Temple, Shirdi and Siddhivinayak Temple, Mubmai missing in live streaming links?</string>
     <string name="answer_3">Answer: Sorry, both the Temples Live streaming seems to be restricted and available only Temple owned websites/apps.</string>
 
+    <string name="media_width">-1</string>
+    <string name="media_height">-1</string>
+
 </resources>
