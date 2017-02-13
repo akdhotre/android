@@ -20,8 +20,11 @@
     <string name="question_3">Question: Why is Sai Baba Temple, Shirdi and Siddhivinayak Temple, Mubmai missing in live streaming links?</string>
     <string name="answer_3">Answer: Sorry, both the Temples Live streaming seems to be restricted and available only Temple owned websites/apps.</string>
 
-    <string name="media_width">-1</string>
-    <string name="media_height">-1</string>
     <string name="dev_email_address">akdhotre.apps@gmail.com</string>
+
+    <string name="app_url">https://play.google.com/store/apps/details?id=com.lotustech.apps.android.livedarshan</string>
+    <string name="tuljapurlive_url"><![CDATA[http://cam.live-s.cdn.bitgravity.com:1935/content:cdn-live/cam/live/secure/feed008?e=0&h=9e65498ec6c77c462ed63a051d55a801]]></string>
+    <string name="kashilive_url"><![CDATA[http://cam.live-s.cdn.bitgravity.com:1935/content:cdn-live/cam/live/secure/Kashi_Vishwanath?e=0&h=1d434391393bd1b37e858a2571fbbf3d]]></string>
+    <string name="pandalpurlive_url"><![CDATA[http://cam.live-s.cdn.bitgravity.com:1935/content:cdn-live/cam/live/secure/feed002?e=0&h=c3ccf04373172e4d9e7b9392327d9b88]]></string>
 
 </resources>

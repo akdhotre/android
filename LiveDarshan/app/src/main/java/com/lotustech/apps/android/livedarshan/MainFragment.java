@@ -6,7 +6,7 @@ import android.net.ConnectivityManager;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.util.Log;
+import android.util.DisplayMetrics;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -21,8 +21,6 @@ import android.widget.Toast;
  * create an instance of this fragment.
  */
 public class MainFragment extends Fragment {
-
-    private static final String TAG = "MainFragment";
 
     /**
      * Use this factory method to create a new instance of
@@ -44,13 +42,13 @@ public class MainFragment extends Fragment {
         View v = inflater.inflate(R.layout.fragment_main, container, false);
 
         TextView mTuljapurLive = (TextView) v.findViewById(R.id.tuljapurlive_btn);
-        mTuljapurLive.setOnClickListener(createListener("http://cam.live-s.cdn.bitgravity.com:1935/content:cdn-live/cam/live/secure/feed008?e=0&h=9e65498ec6c77c462ed63a051d55a801"));
+        mTuljapurLive.setOnClickListener(createListener(getString(R.string.tuljapurlive_url)));
 
         TextView mKashiLive = (TextView) v.findViewById(R.id.kashilive_btn);
-        mKashiLive.setOnClickListener(createListener("http://cam.live-s.cdn.bitgravity.com:1935/content:cdn-live/cam/live/secure/Kashi_Vishwanath?e=0&h=1d434391393bd1b37e858a2571fbbf3d"));
+        mKashiLive.setOnClickListener(createListener(getString(R.string.kashilive_url)));
 
         TextView mPandalpurLive = (TextView) v.findViewById(R.id.pandalpurlive_btn);
-        mPandalpurLive.setOnClickListener(createListener("http://cam.live-s.cdn.bitgravity.com:1935/content:cdn-live/cam/live/secure/feed002?e=0&h=c3ccf04373172e4d9e7b9392327d9b88"));
+        mPandalpurLive.setOnClickListener(createListener(getString(R.string.pandalpurlive_url)));
 
         ImageButton mQuestionButton = (ImageButton) v.findViewById(R.id.question_btn);
         mQuestionButton.setOnClickListener(new View.OnClickListener(){
@@ -78,7 +76,7 @@ public class MainFragment extends Fragment {
             public void onClick(View v) {
                 Intent sendIntent = new Intent();
                 sendIntent.setAction(Intent.ACTION_SEND);
-                sendIntent.putExtra(Intent.EXTRA_TEXT, "Recommend Tuljapur/Kashi/Pandalpur - LiveDarshan App(AdFree) at 'http://google.com'");
+                sendIntent.putExtra(Intent.EXTRA_TEXT, "Try adfree Tuljapur/Kashi/Pandalpur - LiveDarshan App(AdFree) at '"+getString(R.string.app_url)+"'");
                 sendIntent.setType("text/plain");
                 startActivity(sendIntent);
 
@@ -96,15 +94,20 @@ public class MainFragment extends Fragment {
                 boolean isInternetConnected = isInternetConnected(getActivity());
                 //Log.d(TAG, "Is internet connected: " + isInternetConnected);
 
-                if(!isInternetConnected(getActivity())){
+                if(!isInternetConnected){
                     Toast.makeText(getActivity(), R.string.no_internet, Toast.LENGTH_LONG).show();
                     return;
                 }
 
+                DisplayMetrics displaymetrics = new DisplayMetrics();
+                getActivity().getWindowManager().getDefaultDisplay().getMetrics(displaymetrics);
+                int height = (int) (displaymetrics.heightPixels/displaymetrics.density);
+                int width = (int) (displaymetrics.widthPixels/displaymetrics.density);
 
+                //Log.d(TAG, String.format("Screen width[%d], height[%d] ..." , width, height));
 
-                String mDisplayWidth = getResources().getString(R.string.media_width).equals("-1") ? "" : "&width="+getResources().getString(R.string.media_width);
-                String mDisplayHeight = getResources().getString(R.string.media_height).equals("-1") ? "" : "&height=" + getResources().getString(R.string.media_height);
+                String mDisplayWidth = "&width=" + height;
+                String mDisplayHeight = "&height=" + width;
 
                 Intent intent = new Intent(getActivity(), WebViewActivity.class);
                 intent.putExtra("url", url + mDisplayWidth + mDisplayHeight);

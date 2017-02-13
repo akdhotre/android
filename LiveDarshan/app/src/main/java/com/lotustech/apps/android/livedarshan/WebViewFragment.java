@@ -3,16 +3,12 @@ package com.lotustech.apps.android.livedarshan;
 import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.Toast;
-
-import java.io.IOException;
-import java.io.InputStream;
 
 import static com.lotustech.apps.android.livedarshan.R.id.webview;
 
@@ -27,8 +23,6 @@ import static com.lotustech.apps.android.livedarshan.R.id.webview;
 public class WebViewFragment extends Fragment {
 
     private WebView mWebView;
-
-    private static final String TAG = "WebViewFragment";
 
     public static WebViewFragment newInstance(String url) {
         //Log.d(TAG, "new webview to load url: " + url);
