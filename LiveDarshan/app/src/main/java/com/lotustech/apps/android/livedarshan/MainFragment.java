@@ -76,7 +76,7 @@ public class MainFragment extends Fragment {
             public void onClick(View v) {
                 Intent sendIntent = new Intent();
                 sendIntent.setAction(Intent.ACTION_SEND);
-                sendIntent.putExtra(Intent.EXTRA_TEXT, "Try adfree Tuljapur/Kashi/Pandalpur - LiveDarshan App(AdFree) at '"+getString(R.string.app_url)+"'");
+                sendIntent.putExtra(Intent.EXTRA_TEXT, "I recommend adfree Tuljapur/Kashi/Pandalpur - LiveDarshan App at "+getString(R.string.app_url));
                 sendIntent.setType("text/plain");
                 startActivity(sendIntent);
 
