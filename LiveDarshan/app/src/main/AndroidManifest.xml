@@ -12,7 +12,7 @@
         android:roundIcon="@mipmap/ic_launcher"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
-        android:fullBackupContent="false">
+        android:fullBackupContent="true">
         <activity
             android:name=".MainActivity"
             android:screenOrientation="portrait">

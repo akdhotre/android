@@ -11,14 +11,14 @@
     <string name="share"><![CDATA[Share App with Family & Friends]]></string>
     <string name="no_internet">Check Internet Connection!</string>
 
-    <string name="question_1">Question: Why live streaming not started after pressing Media Play button?</string>
-    <string name="answer_1">Answer: Temple live streaming service sometimes is temporarily down, please check again later.</string>
+    <string name="question_1">Question: Why does live streaming does not start after pressing play button?</string>
+    <string name="answer_1">Answer: Sometimes temple live streaming service temporarily goes down, please try to stream later.</string>
 
-    <string name="question_2">Question: Why does it take long time to load the live media streaming?</string>
-    <string name="answer_2">Answer: One or multiple factors can cause this issue, temple live streaming service handling high network requests or internet connectivity is slow.</string>
+    <string name="question_2">Question: Why does it take too long time to load the live media streaming?</string>
+    <string name="answer_2">Answer: This could be because of one or multiple factors, most common been; temple live streaming service handling high network requests or slow internet connectivity.</string>
 
-    <string name="question_3">Question: Why is Sai Baba Temple, Shirdi and Siddhivinayak Temple, Mubmai missing in live streaming links?</string>
-    <string name="answer_3">Answer: Sorry, both the Temples Live streaming seems to be restricted and available only Temple owned websites/apps.</string>
+    <string name="question_3">Question: Why isn't an option to live stream from Sai Baba Temple, Shirdi or Siddhivinayak Temple, Mumbai temples?</string>
+    <string name="answer_3">Answer: Live stream from Sai Baba Temple, Shirdi and Siddhivinayak Temple, Mumbai seems to be restricted.</string>
 
     <string name="dev_email_address">akdhotre.apps@gmail.com</string>
 
